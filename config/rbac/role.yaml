@@ -1,0 +1,59 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - kafka.kafkaop.com
+  resources:
+  - kafkas
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - kafka.kafkaop.com
+  resources:
+  - kafkas/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - kafka.kafkaop.com
+  resources:
+  - kafkas/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - kafka.kafkaop.com
+  resources:
+  - zookeepers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - kafka.kafkaop.com
+  resources:
+  - zookeepers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - kafka.kafkaop.com
+  resources:
+  - zookeepers/status
+  verbs:
+  - get
+  - patch
+  - update

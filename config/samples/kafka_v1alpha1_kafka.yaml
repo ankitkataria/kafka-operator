@@ -1,0 +1,13 @@
+apiVersion: kafka.kafkaop.com/v1alpha1
+kind: Kafka
+metadata:
+  labels:
+    app.kubernetes.io/name: kafka
+    app.kubernetes.io/instance: kafka-sample
+    app.kubernetes.io/part-of: kafka-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: kafka-operator
+  name: kafka-sample
+spec:
+  size: 1
+  version: 7.0.1

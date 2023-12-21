@@ -1,0 +1,13 @@
+apiVersion: kafka.kafkaop.com/v1alpha1
+kind: Zookeeper
+metadata:
+  labels:
+    app.kubernetes.io/name: zookeeper
+    app.kubernetes.io/instance: zookeeper-sample
+    app.kubernetes.io/part-of: kafka-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: kafka-operator
+  name: zookeeper-sample
+spec:
+  size: 1
+  version: 7.0.1
